@@ -1,0 +1,11 @@
+all: Dtest
+
+
+Dtest: Dtest.o  # test program for Deque class
+	g++ -Wall -o Dtest Dtest.o  
+
+Dtest.o: Dtest.cpp Dequeue.h dsexceptions.h
+	g++ -Wall -o Dtest.o -cDtest.cpp
+
+clean:
+	rm -f Stest Qtest Dtest *.o
